@@ -1,0 +1,64 @@
+@use 'styles'
+@use 'colors'
+
+.side-nav
+    position: fixed
+    left: 0
+    top: styles.$navBar-height
+    bottom: 0
+    height: 100vh
+    width: styles.$sideNav-width-collapse
+    display: flex
+    flex-direction: column
+    padding: .5rem
+    z-index: -1
+    transition-duration: .3s
+
+.bg-indigo
+    background: colors.$indigo
+
+/* extras */
+.side-nav
+    .menu-icon
+        padding: 1rem
+        font-size: 1.5rem
+
+.side-nav
+    .item-tile
+        font-size: 1.2rem
+        color: colors.$white
+        display: flex
+        align-items: center
+        border-radius: .2rem
+        margin-bottom: .5rem
+        cursor: pointer
+        transition-duration: .3s
+
+    .item-tile:hover
+        background: #0002
+
+    .item-selector:checked ~ .item-tile
+        background: colors.$white
+        color: colors.$indigo
+        box-shadow: 0 0 .3rem 0 colors.$dark inset
+        cursor: default
+    
+    .icon
+        padding: .5rem
+        min-width: 2.4rem
+        min-height: 2.4rem
+        display: flex
+        align-items: center
+        justify-content: center
+
+    .title
+        padding-right: 0rem
+        width: 100%
+        overflow: hidden
+        transition-duration: .3s
+    
+.expand-true
+    width: styles.$sideNav-width
+
+    .title
+        padding-right: .5rem

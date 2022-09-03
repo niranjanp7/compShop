@@ -1,0 +1,11 @@
+<aside [class]="['side-nav', 'p-fixed', 'bg-indigo', 'shadow-sm', 'expand-' + sideNavOpen]">
+    <ng-container *ngFor="let item of menu; let i = index">
+        <div>
+            <input class="item-selector" type="radio" name="menuSelect" [id]="item.title + '-tile'" [checked]="item.url === selectedByUrl" hidden>
+            <label class="item-tile" [for]="item.title + '-tile'" (click)="loadPage(item.url)">
+                <fa-icon [icon]="item.icon" class="icon"></fa-icon>
+                <div class="title">{{ item.title }}</div>
+            </label>
+        </div>
+    </ng-container>
+</aside>

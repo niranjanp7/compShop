@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'colors'
+
+/* layout */
+$navBar-height: 3rem
+$navBar-width: 100%
+$sideNav-height: calc(100% - $navBar-height)
+$sideNav-width: 10rem
+$sideNav-width-collapse: 3.4rem
+$main-height: calc(100% - $navBar-height)
+$main-width: calc(100% - $sideNav-width)
+
+*
+    margin: 0px
+    padding: 0px
+    box-sizing: border-box
+    font-family: Arial, Helvetica, sans-serif
+
+/* shadows */
+.shadow
+    box-shadow: 0 0 1rem 0 colors.$dark
+
+.shadow-sm
+    box-shadow: 0 0 .5rem 0 colors.$dark
+
+.shadow-in
+    box-shadow: 0 0 1rem 0 colors.$dark inset
+
+.shadow-in-sm
+    box-shadow: 0 0 .5rem 0 colors.$dark inset
+
+.hover\:shadow:hover
+    box-shadow: 0 0 1rem 0 colors.$dark
+
+
+
+/* positions */
+.p-static
+    position: static
+
+.p-absolute
+    position: absolute
+
+.p-fixed
+    position: fixed
+
+.p-sticky
+    position: sticky

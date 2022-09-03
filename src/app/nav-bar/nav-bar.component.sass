@@ -1,0 +1,40 @@
+@use "styles"
+@use "colors"
+
+.nav
+    width: styles.$navBar-width
+    height: styles.$navBar-height
+    font-size: 1.2rem
+    display: flex !important
+    padding-inline: .5rem
+    align-items: center
+    display: block
+
+.nav-dark
+    color: colors.$light
+
+.bg-primary
+    background: colors.$primary
+
+/* extras */
+.nav
+    .menu-icon
+        padding: 0rem .5rem
+        font-size: 1.5rem
+        border-radius: .2rem
+        display: flex
+        align-items: center
+        padding-block: .2rem
+        transition-duration: .3s
+    
+    .checked-true
+        color: colors.$indigo
+        background: colors.$white
+        box-shadow: 0 0 .3rem 0 colors.$dark
+        //background: colors.$indigo
+
+    .title
+        display: inline-block
+        padding: .5rem
+        font-size: 1.5rem
+        font-weight: bold

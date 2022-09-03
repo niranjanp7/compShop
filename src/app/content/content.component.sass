@@ -1,0 +1,16 @@
+@use 'colors'
+@use 'styles'
+
+.main
+    position: absolute
+    top: styles.$navBar-height
+    bottom: 0
+    left: styles.$sideNav-width-collapse
+    right: 0
+    padding: .5rem
+    background: colors.$gray-200
+    z-index: -2
+    transition-duration: .3s
+
+.shrink-true
+    left: styles.$sideNav-width
